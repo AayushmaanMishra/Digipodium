@@ -16,9 +16,10 @@
       referrerpolicy="no-referrer"
     />
     <style>
-        :root{
-            --theme-color: #375b73;
-        }
+      :root {
+        --theme-color: #284a61;
+      }
+
       body {
         margin: 0;
       }
@@ -30,8 +31,10 @@
       }
 
       header {
+        backdrop-filter: blur(10px);
         font-family: "Roboto Slab", serif;
-        background-image: url("https://images.unsplash.com/photo-1707162796436-e716e46e7e49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-image: linear-gradient(0deg, #00000034, var(--theme-color)),
+          url("https://images.unsplash.com/photo-1707162796436-e716e46e7e49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
         height: 100vh;
         background-size: cover;
         background-repeat: no-repeat;
@@ -50,22 +53,23 @@
         font-size: 20px;
       }
 
-      .hero-title,.hero-subtitle {
+      .hero-title,
+      .hero-subtitle {
         text-shadow: 3px 3px 5px #00000070;
       }
 
       .feature-card {
-        /* border: 2px solid red; */
-        padding: 50px;
+        /* border: 2px solid var(--theme-color); */
+        padding: 30px;
         text-align: center;
-        border-radius: 8px;
-        transition: 0.3s ease-in-out;
-
+        border-radius: 5px;
+        transition: 0.12s ease-in-out;
+        cursor: pointer;
       }
 
       .section-feature {
         text-align: center;
-        padding: 50px 300px;
+        padding: 50px 200px;
         margin: 10px 0;
       }
 
@@ -74,71 +78,200 @@
         gap: 40px;
         color: var(--theme-color);
       }
-    .feature-card:hover{
+
+      .feature-card:hover {
         background-color: var(--theme-color);
         color: white;
-        box-shadow: 4px 4px 10px 2px #0000004e;
-    }
-    .section-video{
-        text-align: center;
+        box-shadow: 8px 8px 10px 4px #000000ac;
+      }
+
+      .section-video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
         padding: 50px 300px;
-        margin: 10px 0;
-    }
-    .section-video video{
-        width: 100%;
-    }
-    .section-title{
-        font-family: Roboto;
-        font-size: 3rem;
+      }
+
+      .section-video video {
+        width: 60vw;
+        border-radius: 10px;
+      }
+
+      .section-title {
+        font-family: "Roboto Slab", serif;
         color: var(--theme-color);
-    }
+      }
+
+      .section-contact {
+        padding: 50px 300px;
+      }
+
+      .text-input,
+      .text-input-area {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        box-sizing: border-box;
+      }
+
+      .text-input-area {
+        resize: vertical;
+      }
+
+      .contact-btn {
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        background-color: var(--theme-color);
+        cursor: pointer;
+        border-radius: 3px;
+        font-size: 14px;
+      }
+
+      .form-container {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+      }
+
+      .contact-btn:hover {
+        background-color: #193548;
+        transition: 0.12s ease-in-out;
+      }
+
+      .form-img {
+        background-image: url();
+        background-position: center;
+        background-size: contain;
+      }
+
+      footer {
+        background-color: #bbb;
+        padding: 50px 300px;
+
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+
+      .footer-title {
+        margin: 0;
+        font-size: 30px;
+      }
+
+      .social-link {
+        color: #000;
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
     <header>
-      <h1 class="hero-title" style="text-align: center">Hey</h1>
+      <h1 class="hero-title">Welcome to Our Website</h1>
       <p class="hero-subtitle">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
-        laboriosam minima? Facilis odit accusamus assumenda sunt provident.
-        Suscipit tenetur optio voluptatem nulla dignissimos eius? Nulla aut
-        repellendus quibusdam ex doloribus!
+        Explore the best services Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Consectetur, laboriosam minima? Facilis odit accusamus
+        assumenda sunt provident. Suscipit tenetur optio voluptatem nulla
+        dignissimos eius? Nulla aut repellendus quibusdam ex doloribus!
       </p>
     </header>
     <main>
       <section class="section-feature">
-        <h2 class="section-title">Our Features</h2>
+        <h2 class="section-title">Discover Our Features</h2>
         <div class="card-container">
           <div class="feature-card">
-            <i class="fa-3x fa-solid fa-tree"></i>
-            <h3 class="card-title">Fast Delivery</h3>
+            <i class="fa-3x fa-solid fa-lightbulb"></i>
+            <h3 class="card-title">Innovative Solutions</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              recusandae dolores distinctio suscipit cum perspiciatis?
+              Experience cutting-edge solutions that drive success in your
+              projects.
             </p>
           </div>
           <div class="feature-card">
-            <i class="fa-3x fa-solid fa-tree"></i>
-            <h3 class="card-title">Fast Delivery</h3>
+            <i class="fa-3x fa-solid fa-clock"></i>
+            <h3 class="card-title">Efficient Timelines</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              recusandae dolores distinctio suscipit cum perspiciatis?
+              We ensure fast and efficient delivery, meeting your project
+              deadlines.
             </p>
           </div>
           <div class="feature-card">
-            <i class="fa-3x fa-solid fa-tree"></i>
-            <h3 class="card-title">Fast Delivery</h3>
+            <i class="fa-3x fa-solid fa-heart"></i>
+            <h3 class="card-title">Customer-Centric Approach</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              recusandae dolores distinctio suscipit cum perspiciatis?
+              Our customer-focused approach guarantees your satisfaction and
+              success.
             </p>
           </div>
         </div>
       </section>
       <section class="section-video">
-        <h2 class="section-title">Our work</h2>
-        <video src="pexels-rodnae-productions-7414127 (1080p).mp4" autoplay loop></video>
+        <h2 class="section-title">Witness Our Work</h2>
+        <video src="pexels-rodnae-productions-7414127 (1080p).mp4" autoplay loop muted controls></video>
+      </section>
+      <!-- contact form -->
+      <section class="section-contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="form-container">
+          <div class="form-img"></div>
+          <form class="contact-form">
+            <label>Name:</label>
+            <input type="text" class="text-input" />
+            <label>Email Address:</label>
+            <input type="email" class="text-input" />
+            <label>Contact Number:</label>
+            <input type="number" class="text-input" />
+            <label>Message:</label>
+            <textarea rows="5" class="text-input-area"></textarea>
+            <button type="submit" class="contact-btn">Submit</button>
+          </form>
+        </div>
       </section>
     </main>
-    <footer></footer>
-  </body>
+    <footer>
+      <div class="">
+        <h3 class="footer-title">My website</h3>
+        <p>&copy; 2024 Website Name</p>
+      </div>
+      <div class="">
+        <h4>Find us at:</h4>
+        <p>
+          <i class="fa-brands fa-facebook"></i>
+          <a href="#" class="social-link">Facebook</a>
+        </p>
+        <p>
+          <i class="fa-brands fa-instagram"></i>
+          <a href="#" class="social-link">Instagram</a>
+        </p>
+        <p>
+          <i class="fa-brands fa-x-twitter"></i>
+          <a href="#" class="social-link">X (Twitter)</a>
+        </p>
+        <p>
+          <i class="fa-brands fa-linkedin"></i>
+          <a href="#" class="social-link">LinkedIn</a>
+        </p>
+      </div>
+      <div class="">
+        <h4>Find us at:</h4>
+        <p>
+          <i class="fa-brands fa-facebook"></i>
+          <a href="#" class="social-link">Facebook</a>
+        </p>
+        <p>
+          <i class="fa-brands fa-instagram"></i>
+          <a href="#" class="social-link">Instagram</a>
+        </p>
+        <p>
+          <i class="fa-brands fa-x-twitter"></i>
+          <a href="#" class="social-link">X (Twitter)</a>
+        </p>
+        <p>
+          <i class="fa-brands fa-linkedin"></i>
+          <a href="#" class="social-link">LinkedIn</a>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
