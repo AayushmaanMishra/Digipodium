@@ -4,4 +4,4 @@ console.log(typeof(fru));
 
 console.log(fru[2]);
 
-console.log(fru.indexOf('apple'));
+console.log(fru.indexOf('apple'));c
